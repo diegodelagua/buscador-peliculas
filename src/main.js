@@ -11,7 +11,7 @@ botonBusqueda.addEventListener('click', async ()=>{
     // se obtiene el texto que el usuario escribio
     const nombrePelicula = busquedaPelicula.value;
     // construimos la URL de la API de OMDb insertando el nombre de la película y nuestra API Key
-    const url = `http://www.omdbapi.com/?s=${nombrePelicula}&apikey=71538a62`
+    const url = `https://www.omdbapi.com/?s=${nombrePelicula}&apikey=71538a62`
     try{
         // realizamos la petición a la API y esperamos la respuesta (fetch)
         const respuesta = await fetch(url)
