@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style.css">
+  <title>Buscador de Películas</title>
+</head>
+<body>
+  <div class="min-h-screen bg-slate-900 text-white p-8">
+  <header class="max-w-3xl mx-auto text-center mb-12">
+    <h1 class="text-4xl font-bold mb-4 text-sky-400">Buscador de Películas</h1>
+    <div class="flex gap-2">
+      <input 
+        type="text" 
+        id="input-busqueda"
+        placeholder="Ej: Batman, Star Wars..." 
+        class="flex-1 p-3 rounded bg-slate-800 border border-slate-700 focus:outline-none focus:border-sky-500"
+      >
+      <button 
+        id="btn-buscar"
+        class="bg-sky-600 hover:bg-sky-500 px-6 py-3 rounded font-bold transition-colors"
+      >
+        Buscar
+      </button>
+    </div>
+  </header>
+
+  <main id="contenedor-peliculas" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    </main>
+</div>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
