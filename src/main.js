@@ -35,7 +35,7 @@ botonBusqueda.addEventListener('click', async ()=>{
                         </div>
                         <button 
                             data-id="${pelicula.imdbID}" 
-                            class="boton-detalle mt-4 w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded transition-colors                 duration-200">
+                            class="boton-detalle mt-4 w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded transition-colors duration-200">
                             Ver más
                         </button>
                     </div>
@@ -44,7 +44,12 @@ botonBusqueda.addEventListener('click', async ()=>{
         } else {
             // 4. MANEJO DE RESULTADOS VACÍOS
             // si 'datos.Search' no existe, es porque la API no encontró coincidencias.
-            contenedorPeliculas.innerHTML = '<p class="text-sky-400">No se encontraron resultados</p>';
+            contenedorPeliculas.innerHTML = `
+                                <div class="col-span-full flex flex-col items-center justify-center py-20 w-full">
+                                    <p class="text-sky-400 text-xl font-medium text-center">No se encontraron resultados</p>
+                                    <p class="text-gray-500 text-sm mt-2">Intentá con otro nombre o verificá la ortografía.</p>
+                                </div>
+            `;
         }
     } catch (error){
         // manejo de errores de conexion o de red.
